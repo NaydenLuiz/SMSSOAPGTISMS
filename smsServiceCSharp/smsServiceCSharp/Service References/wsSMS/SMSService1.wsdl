@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="envioMessagem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mensagem" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeros" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="envioMessagemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="envioMessagemResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="envioTeste">
+        <s:complexType />
+      </s:element>
+      <s:element name="envioTesteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="envioTesteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="verificaCredito">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="verificaCreditoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="verificaCreditoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="verificaStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="verificaStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="verificaStatusResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChecarRecebidas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DataInicial" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="DataFinal" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChecarRecebidasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChecarRecebidasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChecarRecebidasData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DataInicial" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="DataFinal" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChecarRecebidasDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChecarRecebidasDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="envioMessagemSoapIn">
+    <wsdl:part name="parameters" element="tns:envioMessagem" />
+  </wsdl:message>
+  <wsdl:message name="envioMessagemSoapOut">
+    <wsdl:part name="parameters" element="tns:envioMessagemResponse" />
+  </wsdl:message>
+  <wsdl:message name="envioTesteSoapIn">
+    <wsdl:part name="parameters" element="tns:envioTeste" />
+  </wsdl:message>
+  <wsdl:message name="envioTesteSoapOut">
+    <wsdl:part name="parameters" element="tns:envioTesteResponse" />
+  </wsdl:message>
+  <wsdl:message name="verificaCreditoSoapIn">
+    <wsdl:part name="parameters" element="tns:verificaCredito" />
+  </wsdl:message>
+  <wsdl:message name="verificaCreditoSoapOut">
+    <wsdl:part name="parameters" element="tns:verificaCreditoResponse" />
+  </wsdl:message>
+  <wsdl:message name="verificaStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:verificaStatus" />
+  </wsdl:message>
+  <wsdl:message name="verificaStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:verificaStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChecarRecebidasSoapIn">
+    <wsdl:part name="parameters" element="tns:ChecarRecebidas" />
+  </wsdl:message>
+  <wsdl:message name="ChecarRecebidasSoapOut">
+    <wsdl:part name="parameters" element="tns:ChecarRecebidasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChecarRecebidasDataSoapIn">
+    <wsdl:part name="parameters" element="tns:ChecarRecebidasData" />
+  </wsdl:message>
+  <wsdl:message name="ChecarRecebidasDataSoapOut">
+    <wsdl:part name="parameters" element="tns:ChecarRecebidasDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SMSServiceSoap">
+    <wsdl:operation name="envioMessagem">
+      <wsdl:input message="tns:envioMessagemSoapIn" />
+      <wsdl:output message="tns:envioMessagemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="envioTeste">
+      <wsdl:input message="tns:envioTesteSoapIn" />
+      <wsdl:output message="tns:envioTesteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="verificaCredito">
+      <wsdl:input message="tns:verificaCreditoSoapIn" />
+      <wsdl:output message="tns:verificaCreditoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="verificaStatus">
+      <wsdl:input message="tns:verificaStatusSoapIn" />
+      <wsdl:output message="tns:verificaStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChecarRecebidas">
+      <wsdl:input message="tns:ChecarRecebidasSoapIn" />
+      <wsdl:output message="tns:ChecarRecebidasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChecarRecebidasData">
+      <wsdl:input message="tns:ChecarRecebidasDataSoapIn" />
+      <wsdl:output message="tns:ChecarRecebidasDataSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SMSServiceSoap" type="tns:SMSServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="envioMessagem">
+      <soap:operation soapAction="http://tempuri.org/envioMessagem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="envioTeste">
+      <soap:operation soapAction="http://tempuri.org/envioTeste" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verificaCredito">
+      <soap:operation soapAction="http://tempuri.org/verificaCredito" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verificaStatus">
+      <soap:operation soapAction="http://tempuri.org/verificaStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChecarRecebidas">
+      <soap:operation soapAction="http://tempuri.org/ChecarRecebidas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChecarRecebidasData">
+      <soap:operation soapAction="http://tempuri.org/ChecarRecebidasData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SMSServiceSoap12" type="tns:SMSServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="envioMessagem">
+      <soap12:operation soapAction="http://tempuri.org/envioMessagem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="envioTeste">
+      <soap12:operation soapAction="http://tempuri.org/envioTeste" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verificaCredito">
+      <soap12:operation soapAction="http://tempuri.org/verificaCredito" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verificaStatus">
+      <soap12:operation soapAction="http://tempuri.org/verificaStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChecarRecebidas">
+      <soap12:operation soapAction="http://tempuri.org/ChecarRecebidas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChecarRecebidasData">
+      <soap12:operation soapAction="http://tempuri.org/ChecarRecebidasData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SMSService">
+    <wsdl:port name="SMSServiceSoap" binding="tns:SMSServiceSoap">
+      <soap:address location="https://api.gtisms.com/gti/API/SMSService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SMSServiceSoap12" binding="tns:SMSServiceSoap12">
+      <soap12:address location="https://api.gtisms.com/gti/API/SMSService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

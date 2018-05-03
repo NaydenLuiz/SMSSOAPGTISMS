@@ -1,0 +1,9 @@
+c:\users\usuario\documents\visual studio 2012\Projects\smsServiceCSharp\smsServiceCSharp\bin\Debug\smsServiceCSharp.exe.config
+c:\users\usuario\documents\visual studio 2012\Projects\smsServiceCSharp\smsServiceCSharp\bin\Debug\smsServiceCSharp.exe
+c:\users\usuario\documents\visual studio 2012\Projects\smsServiceCSharp\smsServiceCSharp\bin\Debug\smsServiceCSharp.pdb
+c:\users\usuario\documents\visual studio 2012\Projects\smsServiceCSharp\smsServiceCSharp\obj\Debug\smsServiceCSharp.csprojResolveAssemblyReference.cache
+c:\users\usuario\documents\visual studio 2012\Projects\smsServiceCSharp\smsServiceCSharp\obj\Debug\smsServiceCSharp.Form1.resources
+c:\users\usuario\documents\visual studio 2012\Projects\smsServiceCSharp\smsServiceCSharp\obj\Debug\smsServiceCSharp.Properties.Resources.resources
+c:\users\usuario\documents\visual studio 2012\Projects\smsServiceCSharp\smsServiceCSharp\obj\Debug\smsServiceCSharp.csproj.GenerateResource.Cache
+c:\users\usuario\documents\visual studio 2012\Projects\smsServiceCSharp\smsServiceCSharp\obj\Debug\smsServiceCSharp.exe
+c:\users\usuario\documents\visual studio 2012\Projects\smsServiceCSharp\smsServiceCSharp\obj\Debug\smsServiceCSharp.pdb
